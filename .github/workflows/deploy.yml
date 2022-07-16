@@ -1,0 +1,81 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    name: Setup Node
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+  version:
+    name: Version bump
+    runs-on: self-hosted
+    needs: [setup]
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    steps:
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v4
+        id: import_gpg
+        with:
+          gpg_private_key: ${{secrets.GPG_KEY}}
+          passphrase: ${{secrets.GPG_PASS}}
+          git_committer_name: ${{secrets.GIT_NAME}}
+          git_committer_email: ${{secrets.GIT_EMAIL}}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+          git_tag_gpgsign: true
+      - name: Publish
+        run: |
+          git config --local gpg.program $(which gpg)
+          git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
+          yarn pkg:version
+          git push --follow-tags origin main
+
+  production:
+    name: Deploy to production
+    runs-on: self-hosted
+    needs: [setup]
+    if: "contains(github.event.head_commit.message, 'chore(release)')"
+    environment:
+      name: production
+      url: https://moonlit.works/
+    outputs:
+      semver: ${{ steps.version.outputs.semver }}
+    steps:
+      - name: Get version
+        id: version
+        run: |
+          echo "::set-output name=semver::$(git describe --tags | sed 's/v//')"
+      - name: Set image
+        id: tag
+        run: |
+          echo "::set-output name=bare::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}"
+          echo "::set-output name=version::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:${{ steps.version.outputs.semver }}"
+      - uses: docker/login-action@v1
+        name: Login to docker registry
+        with:
+          registry: ${{ secrets.DOCKER_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build image
+        run: docker build -t ${{ steps.tag.outputs.version }} .
+      - name: Push image
+        run: docker image push ${{ steps.tag.outputs.bare }} --all-tags
+      - name: Update deployment image
+        uses: eyzi/k8s-deploy@v1
+        with:
+          api_url:    ${{ secrets.DEPLOY_URL }}
+          api_token:  ${{ secrets.DEPLOY_TOKEN }}
+          image:      ${{ steps.tag.outputs.bare }}
+          version:    ${{ steps.version.outputs.semver }}
