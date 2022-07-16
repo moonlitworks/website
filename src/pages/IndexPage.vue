@@ -18,6 +18,8 @@ import ProjectsSection from '../components/ProjectsSection.vue';
 import ContactSection from '../components/ContactSection.vue';
 import FooterCredits from '../components/FooterCredits.vue';
 
+const moonlitName = 'Moonlit Works';
+const moonlitTagline = 'Powered by angst';
 const moonlitDescription = 'Moonlit Works is an independent creator of various story-driven melodrama content such as games, videos, and music.';
 
 useMeta(() => ({
@@ -25,17 +27,17 @@ useMeta(() => ({
   meta: {
     themeColor: { name: 'theme-color', content: '#f7dd89' },
     description: { name: 'description', content: moonlitDescription },
-    googleName: { itemprop: 'name', content: 'Moonlit Works' },
+    googleName: { itemprop: 'name', content: moonlitName },
     googleDescription: { itemprop: 'description', content: moonlitDescription },
     googleImage: { itemprop: 'image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
-    ogSiteName: { property: 'og:site_name', content: 'Moonlit Works | Powered by angs' },
+    ogSiteName: { property: 'og:site_name', content: `${ moonlitName } | ${ moonlitTagline }` },
     ogUrl: { property: 'og:url', content: 'https://moonlit.works' },
     ogType: { property: 'og:type', content: 'website' },
-    ogTitle: { property: 'og:title', content: 'Moonlit Works' },
+    ogTitle: { property: 'og:title', content: moonlitName },
     ogDescription: { property: 'og:description', content: moonlitDescription },
     ogImage: { property: 'og:image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
     twitterCard: { property: 'twitter:card', content: 'summary_large_image' },
-    twitterTitle: { property: 'twitter:title', content: 'Moonlit Works' },
+    twitterTitle: { property: 'twitter:title', content: moonlitName },
     twitterDescription: { property: 'twitter:description', content: moonlitDescription },
     twitterImage: { property: 'twitter:image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
   },
