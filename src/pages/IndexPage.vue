@@ -1,49 +1,54 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="column items-center justify-center">
+    <MoonlitLogo />
+    <SnsLinks />
+    <ProjectsSection />
+    <ContactSection />
+    <FooterCredits />
   </q-page>
 </template>
 
-<script lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { useMeta } from 'quasar';
+import { defineComponent } from 'vue';
 
-export default defineComponent({
+import MoonlitLogo from '../components/MoonlitLogo.vue';
+import SnsLinks from '../components/SnsLinks.vue';
+import ProjectsSection from '../components/ProjectsSection.vue';
+import ContactSection from '../components/ContactSection.vue';
+import FooterCredits from '../components/FooterCredits.vue';
+
+const moonlitDescription = 'Moonlit Works is an independent creator of various story-driven melodrama content such as games, videos, and music.';
+
+useMeta(() => ({
+  title: 'Moonlit Works | Powered by angst',
+  meta: {
+    themeColor: { name: 'theme-color', content: '#f7dd89' },
+    description: { name: 'description', content: moonlitDescription },
+    googleName: { itemprop: 'name', content: 'Moonlit Works' },
+    googleDescription: { itemprop: 'description', content: moonlitDescription },
+    googleImage: { itemprop: 'image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
+    ogSiteName: { property: 'og:site_name', content: 'Moonlit Works | Powered by angs' },
+    ogUrl: { property: 'og:url', content: 'https://moonlit.works' },
+    ogType: { property: 'og:type', content: 'website' },
+    ogTitle: { property: 'og:title', content: 'Moonlit Works' },
+    ogDescription: { property: 'og:description', content: moonlitDescription },
+    ogImage: { property: 'og:image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
+    twitterCard: { property: 'twitter:card', content: 'summary_large_image' },
+    twitterTitle: { property: 'twitter:title', content: 'Moonlit Works' },
+    twitterDescription: { property: 'twitter:description', content: moonlitDescription },
+    twitterImage: { property: 'twitter:image', content: 'https://cdn.moonlit.works/www/yami-meta.png' },
+  },
+}));
+
+defineComponent({
   name: 'IndexPage',
-  components: { ExampleComponent },
-  setup () {
-    const todos = ref<Todo[]>([
-      {
-        id: 1,
-        content: 'ct1'
-      },
-      {
-        id: 2,
-        content: 'ct2'
-      },
-      {
-        id: 3,
-        content: 'ct3'
-      },
-      {
-        id: 4,
-        content: 'ct4'
-      },
-      {
-        id: 5,
-        content: 'ct5'
-      }
-    ]);
-    const meta = ref<Meta>({
-      totalCount: 1200
-    });
-    return { todos, meta };
-  }
+  components: {
+    MoonlitLogo,
+    SnsLinks,
+    ProjectsSection,
+    ContactSection,
+    FooterCredits,
+  },
 });
 </script>
