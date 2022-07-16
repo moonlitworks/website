@@ -1,6 +1,7 @@
 <template>
-  <a :href="link.url" target="_blank" :title="capitalize(link.label)">
+  <a :href="link.url" target="_blank">
     <component :is="iconByLabel(link.label)" id="icon" :class="toDark===true ? 'to-dark' : 'to-primary'"></component>
+    <q-tooltip anchor="top middle" self="bottom middle">{{capitalize(link.label)}}</q-tooltip>
   </a>
 </template>
 

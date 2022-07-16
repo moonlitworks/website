@@ -4,6 +4,7 @@
       <span id="project-title" :class="project.category">
         {{project.title}}
       </span>
+      <span v-if="project.releaseDate" id="project-date">{{project.releaseDate}}</span>
       <div v-if="project.links.length > 0" id="project-links">
         <SnsLink v-for="link in project.links" :key="link.label" :link="link" :to-dark="true" />
       </div>
@@ -36,8 +37,8 @@ defineComponent({
   position: relative;
   width: 400px;
   height: 229px;
-  margin: 30px 15px;
-  opacity: 0.6;
+  margin: 15px 15px;
+  opacity: 0.5;
   transition: opacity .2s;
 }
 
@@ -62,6 +63,10 @@ defineComponent({
   color: $dark;
   padding: 1px 5px;
   font-weight: 500;
+}
+
+#project-date {
+  font-size: 0.7em;
 }
 
 #project-image {
@@ -94,7 +99,7 @@ defineComponent({
 
 #project-title.storyclips::after {
   content: 'Storyclips';
-  background-color: #159c49;
+  background-color: #e33232;
 }
 
 #project-title.interactives::after {
@@ -104,7 +109,7 @@ defineComponent({
 
 #project-title.lullabies::after {
   content: 'Lullabies';
-  background-color: #982fc2;
+  background-color: #159c49;
 }
 
 #project-links {

@@ -51,7 +51,7 @@ defineComponent({
 
 <style scoped lang="scss">
 #projects-section {
-  margin: 80px 0px;
+  margin: 50px 0px;
   max-width: 80vw;
 }
 </style>

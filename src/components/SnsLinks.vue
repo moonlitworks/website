@@ -1,9 +1,10 @@
 <template>
   <q-item v-if="discordLink" class="column items-center justify-center">
-    <a :href="discordLink.url" target="_blank" title="Discord">
+    <a :href="discordLink.url" target="_blank">
       <q-item id="cta" class="row items-center justify-center q-py-none q-px-md">
         <DiscordIcon />
         <div class="q-px-sm">Join Our Community</div>
+        <q-tooltip anchor="top middle" self="bottom middle">Discord</q-tooltip>
       </q-item>
     </a>
     <q-item class="row q-pt-md">
