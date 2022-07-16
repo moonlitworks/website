@@ -21,9 +21,6 @@ jobs:
   version:
     name: Version bump
     runs-on: self-hosted
-    strategy:
-      matrix:
-        node-version: [16.x]
     needs: [setup]
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
@@ -48,9 +45,6 @@ jobs:
   production:
     name: Deploy to production
     runs-on: self-hosted
-    strategy:
-      matrix:
-        node-version: [16.x]
     needs: [setup]
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     environment:
