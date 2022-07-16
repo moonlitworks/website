@@ -121,4 +121,19 @@ defineComponent({
 #project-links > * {
   margin: 3px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  #project {
+    margin: 15px 15px;
+    width: 350px;
+    height: 197px;
+  }
+
+  #project-description,
+  #project-image {
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

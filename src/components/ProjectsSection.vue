@@ -54,4 +54,11 @@ defineComponent({
   margin: 50px 0px;
   max-width: 80vw;
 }
+
+@media only screen and (max-width: 600px) {
+  #projects-section {
+    margin: 50px 0px;
+    max-width: 100vw;
+  }
+}
 </style>
