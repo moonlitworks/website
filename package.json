@@ -4,7 +4,7 @@
   "description": "Moonlit Works website",
   "productName": "Moonlit Works",
   "author": "eyzi <contact@eyzi.dev>",
-  "private": true,
+  "license": "MPL-2.0",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
