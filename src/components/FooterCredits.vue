@@ -21,5 +21,6 @@ defineComponent({
   font-size: 0.8em;
   background-color: transparent;
   color: $primary;
+  pointer-events: none;
 }
 </style>
