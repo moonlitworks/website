@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --local gpg.program $(which gpg)
           git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
-          yarn pkg:version
+          npm run pkg:version
           git push --follow-tags origin main
 
   production:
