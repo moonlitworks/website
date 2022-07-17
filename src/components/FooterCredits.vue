@@ -2,7 +2,7 @@
   <q-footer
     id="footer"
     class="column items-center justify-center q-pb-md q-pt-lg">
-    <div>© 2015 - {{currentYear}} Moonlit Works</div>
+    <div>Moonlit Works © 2015 - {{currentYear}}</div>
   </q-footer>
 </template>
 
