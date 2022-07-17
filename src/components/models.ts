@@ -6,7 +6,9 @@ export type SnsLinkLabel =
   | "itch"
   | "github"
   | "twitch"
-  | "spotify";
+  | "spotify"
+  | "honeyfeed"
+  | "google-play-store";
 
 export type SnsLinkType = {
   label: string;
