@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/moonlitworks/website/compare/v0.0.7...v0.0.8) (2022-07-17)
+
+
+### Features
+
+* **icons:** add google play store and generic icons ([8ef5ceb](https://github.com/moonlitworks/website/commit/8ef5ceb304b233202005c13e0e965a8a051f3730))
+
 ### [0.0.7](https://github.com/moonlitworks/website/compare/v0.0.6...v0.0.7) (2022-07-17)
 
 ### [0.0.6](https://github.com/moonlitworks/website/compare/v0.0.5...v0.0.6) (2022-07-16)
