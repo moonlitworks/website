@@ -1,7 +1,7 @@
 <template>
-  <q-item>
-    Reach us by email at&nbsp;
-    <span>contact@moonlit.works</span>
+  <q-item class="column items-center justify-center">
+    <div id="description">multimedia stories powered by angst</div>
+    <div>contact@moonlit.works</div>
   </q-item>
 </template>
 
@@ -12,3 +12,9 @@ defineComponent({
   name: 'ContactSection',
 })
 </script>
+
+<style lang="scss" scoped>
+#description {
+  color: rgb(243, 243, 243);
+}
+</style>

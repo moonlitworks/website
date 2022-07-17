@@ -20,7 +20,7 @@ import FooterCredits from '../components/FooterCredits.vue';
 
 const moonlitName = 'Moonlit Works';
 const moonlitTagline = 'Powered by angst';
-const moonlitDescription = 'Moonlit Works is an independent creator of various story-driven melodrama content such as games, videos, and music.';
+const moonlitDescription = 'Moonlit Works is an independent creator, developer, and publisher of various story-driven multimedia melodrama stories and contents such as novels, games, videos, and music. Powered by angst.';
 
 useMeta(() => ({
   title: 'Moonlit Works | Powered by angst',

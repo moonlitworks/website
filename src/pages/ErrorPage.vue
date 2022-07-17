@@ -23,7 +23,7 @@ import { defineComponent } from 'vue';
 import MoonlitLogo from '../components/MoonlitLogo.vue';
 
 useMeta(() => ({
-  title: 'Error | Moonlit Works'
+  title: 'Moonlit Works | Error'
 }));
 
 defineComponent({
