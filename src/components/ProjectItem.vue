@@ -112,6 +112,11 @@ defineComponent({
   background-color: #159c49;
 }
 
+#project-title.forenotes::after {
+  content: 'Forenotes';
+  background-color: #8d43c9;
+}
+
 #project-links {
   position: absolute;
   right: 0;
