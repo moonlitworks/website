@@ -81,4 +81,4 @@ jobs:
           api_url:    ${{ secrets.DEPLOY_URL }}
           api_token:  ${{ secrets.DEPLOY_TOKEN }}
           image:      ${{ steps.tag.outputs.bare }}
-          version:    ${{ steps.version.outputs.semver }}
+          version:    ${{ steps.package.outputs.version }}
