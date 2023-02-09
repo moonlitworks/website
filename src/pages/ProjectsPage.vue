@@ -1,5 +1,5 @@
 <template>
-  <q-page class="text-white column items-center">
+  <q-page class="text-white column items-center center-children">
     <MoonlitLogoHeader />
 
     <h4>Interactives</h4>
@@ -50,4 +50,7 @@ defineComponent({
 </script>
 
 <style scoped>
+.center-children > * {
+  text-align: center;
+}
 </style>
