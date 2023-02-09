@@ -6,27 +6,26 @@ on:
       - main
 
 jobs:
-  setup:
-    name: Setup Node
+  version:
+    name: Version
     runs-on: self-hosted
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         name: Checkout
         with:
           fetch-depth: 0
+          token: ${{ secrets.GIT_TOKEN }}
       - uses: actions/setup-node@v3
+        name: Setup Node
         with:
           node-version: 16
-
-  version:
-    name: Version bump
-    runs-on: self-hosted
-    needs: [setup]
-    if: "!contains(github.event.head_commit.message, 'chore(release)')"
-    steps:
+      - uses: borales/actions-yarn@v3.0.0
+        name: Install dependencies
+        with:
+          cmd: install
       - name: Import GPG Key
-        uses: crazy-max/ghaction-import-gpg@v4
-        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v5.2.0
         with:
           gpg_private_key: ${{secrets.GPG_KEY}}
           passphrase: ${{secrets.GPG_PASS}}
@@ -36,11 +35,12 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
       - name: Publish
+        env:
+          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
           git config --local gpg.program $(which gpg)
-          git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
           npm run pkg:version
-          git push --follow-tags origin main
+          git push --follow-tags origin ${{github.ref_name}}
 
   production:
     name: Deploy to production
@@ -51,17 +51,21 @@ jobs:
       name: production
       url: https://moonlit.works/
     outputs:
-      semver: ${{ steps.version.outputs.semver }}
+      semver: ${{ steps.package.outputs.version }}
     steps:
-      - name: Get version
-        id: version
-        run: |
-          echo "::set-output name=semver::$(git describe --tags | sed 's/v//')"
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GIT_TOKEN }}
+      - name: Get package info
+        id: package
+        uses: codex-team/action-nodejs-package-info@v1
       - name: Set image
         id: tag
         run: |
           echo "::set-output name=bare::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}"
-          echo "::set-output name=version::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:${{ steps.version.outputs.semver }}"
+          echo "::set-output name=version::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:${{steps.package.outputs.version}}"
       - uses: docker/login-action@v1
         name: Login to docker registry
         with:
