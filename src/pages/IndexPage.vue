@@ -2,21 +2,19 @@
   <q-page class="column items-center justify-center">
     <MoonlitLogo />
     <SnsLinks />
-    <ProjectsSection />
-    <ContactSection />
+    <NavigationSection />
     <FooterCredits />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { useMeta } from 'quasar';
-import { defineComponent } from 'vue';
+import { useMeta } from 'quasar'
+import { defineComponent } from 'vue'
 
-import MoonlitLogo from '../components/MoonlitLogo.vue';
+import MoonlitLogo from '../components/MoonlitLogo.vue'
 import SnsLinks from '../components/SnsLinks.vue';
-import ProjectsSection from '../components/ProjectsSection.vue';
-import ContactSection from '../components/ContactSection.vue';
-import FooterCredits from '../components/FooterCredits.vue';
+import NavigationSection from '../components/NavigationSection.vue'
+import FooterCredits from '../components/FooterCredits.vue'
 
 const moonlitName = 'Moonlit Works';
 const moonlitTagline = 'Powered by angst';
@@ -48,8 +46,7 @@ defineComponent({
   components: {
     MoonlitLogo,
     SnsLinks,
-    ProjectsSection,
-    ContactSection,
+    NavigationSection,
     FooterCredits,
   },
 });

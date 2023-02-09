@@ -104,12 +104,12 @@ defineComponent({
 
 #project-title.interactives::after {
   content: 'Interactives';
-  background-color: #3086c0;
+  background-color: #159c49;
 }
 
 #project-title.lullabies::after {
   content: 'Lullabies';
-  background-color: #159c49;
+  background-color:#3086c0;
 }
 
 #project-title.forenotes::after {

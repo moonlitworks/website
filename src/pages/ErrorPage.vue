@@ -17,11 +17,10 @@
 </template>
 
 <script setup lang="ts">
-import { useMeta } from 'quasar';
-import { defineComponent } from 'vue';
+import { useMeta } from 'quasar'
+import { defineComponent } from 'vue'
 
-import MoonlitLogo from '../components/MoonlitLogo.vue';
-
+import MoonlitLogo from '../components/MoonlitLogo.vue'
 useMeta(() => ({
   title: 'Moonlit Works | Error'
 }));

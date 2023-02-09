@@ -1,20 +1,14 @@
 <template>
   <q-img
     id="logo"
-    class="q-my-xl"
+    class="q-my-md"
     width="250px"
     src="https://cdn.moonlit.works/www/moonlit-logo.png"
-    @click.prevent="showProjects"
   ></q-img>
 </template>
 
 <script setup lang="ts">
-import events from './events';
 import { defineComponent } from 'vue';
-
-function showProjects() {
-  events.emit('logo:click')
-}
 
 defineComponent({
   name: 'MoonlitLogo',
@@ -22,7 +16,4 @@ defineComponent({
 </script>
 
 <style lang="scss" scoped>
-#logo {
-  cursor: pointer;
-}
 </style>
