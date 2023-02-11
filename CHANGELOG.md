@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/moonlitworks/website/compare/v0.0.15...v0.0.16) (2023-02-11)
+
+
+### Features
+
+* **projects:** add dawnstains section ([ef26ed4](https://github.com/moonlitworks/website/commit/ef26ed44f39f9735c3075359071dda0698e75833))
+
 ### [0.0.15](https://github.com/moonlitworks/website/compare/v0.0.14...v0.0.15) (2023-02-11)
 
 
