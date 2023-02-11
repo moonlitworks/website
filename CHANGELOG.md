@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/moonlitworks/website/compare/v0.0.14...v0.0.15) (2023-02-11)
+
+
+### Features
+
+* **home:** add link to store ([6688c8b](https://github.com/moonlitworks/website/commit/6688c8bc8ba2220604f72eeb45a7c88c45db0eb2))
+
 ### [0.0.14](https://github.com/moonlitworks/website/compare/v0.0.13...v0.0.14) (2023-02-09)
 
 
