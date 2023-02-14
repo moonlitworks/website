@@ -17,11 +17,11 @@ import NavigationSection from '../components/NavigationSection.vue'
 import FooterCredits from '../components/FooterCredits.vue'
 
 const moonlitName = 'Moonlit Works';
-const moonlitTagline = 'Powered by angst';
-const moonlitDescription = 'Moonlit Works is an independent creator, developer, and publisher of various story-driven multimedia melodrama stories and contents such as novels, games, videos, and music. Powered by angst.';
+const moonlitTagline = 'Emotions After Dark';
+const moonlitDescription = 'Moonlit Works is an independent creator, developer, and publisher of various story-driven multimedia melodrama stories and contents such as novels, games, videos, and music. Powered by angst. Emotions After Dark.';
 
 useMeta(() => ({
-  title: 'Moonlit Works | Powered by angst',
+  title: 'Moonlit Works',
   meta: {
     themeColor: { name: 'theme-color', content: '#f7dd89' },
     description: { name: 'description', content: moonlitDescription },

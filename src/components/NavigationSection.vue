@@ -1,6 +1,8 @@
 <template>
   <q-item class="column items-center justify-center">
     <div id="description" class="column items-center justify-center">
+      <div>Emotions After Dark</div>
+      <br/>
       <div>Independent creator of anime-styled</div>
       <div>multimedia melodrama</div>
     </div>
