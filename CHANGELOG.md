@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/moonlitworks/website/compare/v0.0.16...v0.0.17) (2023-02-14)
+
+
+### Features
+
+* **brand:** update tagline ([ee952eb](https://github.com/moonlitworks/website/commit/ee952ebce3fb66c506b13e89c5eb98d30b53dd3e))
+
 ### [0.0.16](https://github.com/moonlitworks/website/compare/v0.0.15...v0.0.16) (2023-02-11)
 
 
