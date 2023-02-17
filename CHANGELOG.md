@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/moonlitworks/website/compare/v0.0.18...v0.0.19) (2023-02-17)
+
+
+### Features
+
+* **page:** add notable contributors page ([7a5a8e8](https://github.com/moonlitworks/website/commit/7a5a8e8964fa46e3749e00994fe2852f87d83944))
+
 ### [0.0.18](https://github.com/moonlitworks/website/compare/v0.0.17...v0.0.18) (2023-02-15)
 
 ### [0.0.17](https://github.com/moonlitworks/website/compare/v0.0.16...v0.0.17) (2023-02-14)
