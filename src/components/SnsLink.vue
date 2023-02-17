@@ -20,10 +20,12 @@ import TwitchIcon from './sns-icons/TwitchIcon.vue';
 import SpotifyIcon from './sns-icons/SpotifyIcon.vue';
 import UnknownIcon from './sns-icons/UnknownIcon.vue';
 import GooglePlayStoreIcon from './sns-icons/GooglePlayStoreIcon.vue';
+import SoundcloudIcon from './sns-icons/SoundcloudIcon.vue';
+import DeviantartIcon from './sns-icons/DeviantartIcon.vue';
 
 defineProps<{ link: SnsLinkType, toDark: boolean }>();
 
-function iconByLabel(label: SnsLinkLabel) {
+function iconByLabel(label: SnsLinkLabel | string) {
   switch(label) {
     case 'discord': return DiscordIcon;
     case 'twitter': return TwitterIcon;
@@ -34,6 +36,8 @@ function iconByLabel(label: SnsLinkLabel) {
     case 'twitch': return TwitchIcon;
     case 'spotify': return SpotifyIcon;
     case 'google-play-store': return GooglePlayStoreIcon;
+    case 'soundcloud': return SoundcloudIcon;
+    case 'deviantart': return DeviantartIcon;
     default: return UnknownIcon;
   }
 }
@@ -50,6 +54,8 @@ defineComponent({
     TwitchIcon,
     SpotifyIcon,
     GooglePlayStoreIcon,
+    SoundcloudIcon,
+    DeviantartIcon,
   }
 });
 </script>

@@ -30,7 +30,7 @@ module.exports = configure(function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
-      
+
       'axios',
     ],
 
@@ -79,7 +79,7 @@ module.exports = configure(function (/* ctx */) {
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
 
-      
+
       // vitePlugins: [
       //   [ 'package-name', { ..options.. } ]
       // ]
@@ -110,7 +110,9 @@ module.exports = configure(function (/* ctx */) {
       // Quasar plugins
       plugins: [
         'Meta'
-      ]
+      ],
+
+      cssAddon: true,
     },
 
     // animations: 'all', // --- includes all animations

@@ -1,14 +1,14 @@
-export type SnsLinkLabel = 
-  | "twitter"
-  | "discord"
-  | "youtube"
-  | "steam"
-  | "itch"
-  | "github"
-  | "twitch"
-  | "spotify"
-  | "honeyfeed"
-  | "google-play-store";
+export type SnsLinkLabel =
+  | 'twitter'
+  | 'discord'
+  | 'youtube'
+  | 'steam'
+  | 'itch'
+  | 'github'
+  | 'twitch'
+  | 'spotify'
+  | 'honeyfeed'
+  | 'google-play-store';
 
 export type SnsLinkType = {
   label: string;
@@ -32,4 +32,14 @@ export type ProjectType = {
   links?: SnsLinkType[];
   tags?: string[];
   members?: ProjectMemberType[];
+}
+
+export type Contributor = {
+  name: string;
+  image?: string;
+  contribution: string;
+  links: {
+    label: string;
+    url: string;
+  }[]
 }

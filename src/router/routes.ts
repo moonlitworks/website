@@ -21,6 +21,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/SubLayout.vue'),
     children: [{ path: '', component: () => import('pages/YamiPage.vue') }],
   },
+  {
+    path: '/notable-contributors',
+    component: () => import('layouts/SubLayout.vue'),
+    children: [{ path: '', component: () => import('pages/NotableContributorsPage.vue') }],
+  },
 
   // Always leave this as last one,
   // but you can also remove it
