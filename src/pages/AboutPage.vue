@@ -8,6 +8,9 @@
       <div>Moonlit Works is an independent creator of anime-styled multimedia melodrama.</div>
       <div>Our goal is to create a huge collection of story-driven works in all kinds of media.</div>
       <div>Reach us through email at <a href="mailto:contact@moonlit.works" target="_blank">contact@moonlit.works</a></div>
+      <br/>
+      <div>A big part of Moonlit Works is the people who are and have been involved with it.</div>
+      <div>Check out the list of our amazing <a href="/notable-contributors">notable contributors</a>!</div>
 
       <br/><br/>
 
@@ -20,7 +23,6 @@
       <br/><br/>
 
       <h4>Collaboration</h4>
-      <div>Check out the list of our amazing <a href="/notable-contributors">Notable Contributors</a>!</div>
       <div>We are always on the lookout for talented individuals and interesting creative ventures.</div>
       <div>If you are interested in joining our projects, don't hesitate to contact us!</div>
 

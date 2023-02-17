@@ -5,9 +5,14 @@
     <div id="content" class="text-white column items-center center-children">
       <h4>Notable Contributors</h4>
       <div>
-        This page serves as a shoutout to the wonderful people who have been part of the Moonlit team
-        across and beyond individual projects. Their contributions, big or small, past or present,
-        tangible or not, are valuable to us and we will always be grateful for being able to work with them!
+        This page serves as a shoutout and recognition to the wonderful people who have been part
+        of the Moonlit team across and beyond individual projects. Their contributions, big or
+        small, past or present, tangible or not, are valuable to us.
+      </div>
+      <br/>
+      <div>
+        These people play a big part in Moonlit's history and we will always be grateful for
+        being able to work with them!
       </div>
     </div>
 
