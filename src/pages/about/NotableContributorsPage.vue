@@ -28,10 +28,10 @@
 import { useMeta } from 'quasar'
 import { defineComponent, ref, onMounted } from 'vue'
 import { api } from 'src/boot/axios'
-import MoonlitLogoHeader from '../components/MoonlitLogoHeader.vue'
-import ContributorCard from '../components/ContributorCard.vue'
-import FooterCredits from '../components/FooterCredits.vue'
-import { Contributor } from '../components/models'
+import MoonlitLogoHeader from '../../components/MoonlitLogoHeader.vue'
+import ContributorCard from '../../components/ContributorCard.vue'
+import FooterCredits from '../../components/FooterCredits.vue'
+import { Contributor } from '../../components/models'
 
 let contributors = ref<Contributor[]>([])
 

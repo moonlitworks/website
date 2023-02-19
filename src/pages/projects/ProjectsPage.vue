@@ -36,9 +36,9 @@
 <script setup lang="ts">
 import { useMeta } from 'quasar'
 import { defineComponent } from 'vue'
-import MoonlitLogoHeader from '../components/MoonlitLogoHeader.vue'
-import ProjectsSection from '../components/ProjectsSection.vue'
-import FooterCredits from '../components/FooterCredits.vue'
+import MoonlitLogoHeader from '../../components/MoonlitLogoHeader.vue'
+import ProjectsSection from '../../components/ProjectsSection.vue'
+import FooterCredits from '../../components/FooterCredits.vue'
 
 useMeta(() => ({
   title: 'Moonlit Works | Projects'

@@ -11,10 +11,10 @@
 import { useMeta } from 'quasar'
 import { defineComponent } from 'vue'
 
-import MoonlitLogo from '../components/MoonlitLogo.vue'
-import SnsLinks from '../components/SnsLinks.vue';
-import NavigationSection from '../components/NavigationSection.vue'
-import FooterCredits from '../components/FooterCredits.vue'
+import MoonlitLogo from '../../components/MoonlitLogo.vue'
+import SnsLinks from '../../components/SnsLinks.vue';
+import NavigationSection from '../../components/NavigationSection.vue'
+import FooterCredits from '../../components/FooterCredits.vue'
 
 const moonlitName = 'Moonlit Works';
 const moonlitTagline = 'Emotions After Dark';

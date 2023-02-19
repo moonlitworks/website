@@ -2,8 +2,8 @@
   <div class="column text-center q-py-sm">
     <a :href="props.imageUrl" target="_blank"><q-img
       id="art"
-      height="512px"
-      width="350px"
+      :height="height"
+      :width="width"
       :src="props.imageUrl"
     ></q-img></a>
     <a :href="props.artistUrl" target="_blank">{{ props.artistName }}</a>
@@ -25,6 +25,14 @@ let props = defineProps({
   artistUrl: {
     type: String,
     default: undefined,
+  },
+  width: {
+    type: String,
+    default: '350px',
+  },
+  height: {
+    type: String,
+    default: '512px',
   },
 })
 

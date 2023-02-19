@@ -20,7 +20,7 @@
 import { useMeta } from 'quasar'
 import { defineComponent } from 'vue'
 
-import MoonlitLogo from '../components/MoonlitLogo.vue'
+import MoonlitLogo from '../../components/MoonlitLogo.vue'
 useMeta(() => ({
   title: 'Moonlit Works | Error'
 }));
