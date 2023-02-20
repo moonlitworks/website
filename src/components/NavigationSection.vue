@@ -5,7 +5,7 @@
     </div>
     <div class="row q-pt-lg items-center justify-center">
       <a href="/projects"><div class="interlink q-px-sm q-mx-sm">PROJECTS</div></a>
-      <a href="https://store.moonlit.works"><div class="interlink q-px-sm q-mx-sm">STORE</div></a>
+      <!-- <a href="https://store.moonlit.works"><div class="interlink q-px-sm q-mx-sm">STORE</div></a> -->
       <a href="/about"><div class="interlink q-px-sm q-mx-sm">ABOUT</div></a>
     </div>
   </q-item>

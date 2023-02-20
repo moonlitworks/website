@@ -18,7 +18,7 @@
     <div>Short dramas</div>
     <ProjectsSection category="storyclips" />
 
-    <br/><br/>
+    <!-- <br/><br/>
 
     <h4>Forenotes</h4>
     <div>Pure prose. Usually our prototype story ideas posted on <a href="https://www.honeyfeed.fm/" target="_blank">Honeyfeed</a>.</div>
@@ -27,7 +27,7 @@
     <br/><br/>
 
     <h4>Dawnstains</h4>
-    <div>Physical goods. Check out our <a href="https://store.moonlit.works">store</a>!</div>
+    <div>Physical goods. Check out our <a href="https://store.moonlit.works">store</a>!</div> -->
 
     <FooterCredits />
   </q-page>
