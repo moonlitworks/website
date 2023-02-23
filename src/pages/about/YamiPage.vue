@@ -4,6 +4,10 @@
 
     <h4>Yami</h4>
     <div>Yami is the mascot of Moonlit Works</div>
+    <br/>
+    <div>
+      In the Moonlit lore, she is the deity of unknown. A trickster and resides on the second moon.
+    </div>
 
     <br/><br/>
 
