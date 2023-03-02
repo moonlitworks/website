@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/moonlitworks/website/compare/v0.0.23...v0.0.24) (2023-03-02)
+
+
+### Bug Fixes
+
+* **yami:** set max width ([7630853](https://github.com/moonlitworks/website/commit/763085307886d4dc88fdeec581f4ea49eed1904a))
+
 ### [0.0.23](https://github.com/moonlitworks/website/compare/v0.0.22...v0.0.23) (2023-02-23)
 
 ### [0.0.22](https://github.com/moonlitworks/website/compare/v0.0.21...v0.0.22) (2023-02-20)
