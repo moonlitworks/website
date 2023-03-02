@@ -5,6 +5,8 @@
       :height="height"
       :width="width"
       :src="props.imageUrl"
+      fit="cover"
+      :style="styleVal"
     ></q-img></a>
     <a :href="props.artistUrl" target="_blank">{{ props.artistName }}</a>
   </div>
@@ -34,6 +36,10 @@ let props = defineProps({
     type: String,
     default: '512px',
   },
+  styleVal: {
+    type: String,
+    default: 'max-width: 800%;',
+  }
 })
 
 defineComponent({
@@ -42,4 +48,7 @@ defineComponent({
 </script>
 
 <style lang="scss" scoped>
+#art {
+  max-width: 100%;
+}
 </style>

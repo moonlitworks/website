@@ -3,10 +3,14 @@
     <MoonlitLogoHeader />
 
     <h4>Yami</h4>
-    <div>Yami is the mascot of Moonlit Works</div>
-    <br/>
-    <div>
-      In the Moonlit lore, she is the deity of unknown. A trickster and resides on the second moon.
+    <div class="column text-center text-white q-pa-sm">
+      <div>
+        Yami is the mascot of Moonlit Works
+      </div>
+      <br/>
+      <div>
+        In the Moonlit lore, she is the deity of unknown. A trickster and resides on the second moon.
+      </div>
     </div>
 
     <br/><br/>
@@ -27,11 +31,10 @@
 
     <h5>Designs</h5>
     <div class="row justify-center">
-      <YamiArt image-url="https://cdn.moonlit.works/files/yami/yami-by-rend.png" artist-name="@Rend_Fa" artist-url="https://twitter.com/Rend_Fa" width="796px" height="383.422px" />
+      <YamiArt image-url="https://cdn.moonlit.works/files/yami/yami-by-rend.png" artist-name="@Rend_Fa" artist-url="https://twitter.com/Rend_Fa" width="100vw" height="auto" style-val="max-width: 800px;" />
     </div>
     <div class="row justify-center">
-      <YamiArt image-url="https://cdn.moonlit.works/files/yami/yami-detail.png" artist-name="@TheEyzi" artist-url="https://twitter.com/TheEyzi" width="396px" height="396px" />
-      <YamiArt image-url="https://cdn.moonlit.works/files/yami/yami-design.png" artist-name="@TheEyzi" artist-url="https://twitter.com/TheEyzi" width="396px" height="396px" />
+      <YamiArt image-url="https://cdn.moonlit.works/files/yami/yami-by-arhunova.png" artist-name="@Arhunova" artist-url="https://www.deviantart.com/arhunova" width="100vw" height="auto" style-val="max-width: 800px;" />
     </div>
 
     <FooterCredits />
