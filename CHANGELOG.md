@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.25](https://github.com/moonlitworks/website/compare/v0.0.24...v0.0.25) (2023-09-09)
+
+
+### Features
+
+* **sns:** add vgen icon ([84f9a3c](https://github.com/moonlitworks/website/commit/84f9a3caa806875cfc4931758955df620168c171))
+
 ### [0.0.24](https://github.com/moonlitworks/website/compare/v0.0.23...v0.0.24) (2023-03-02)
 
 
