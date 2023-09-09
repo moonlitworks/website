@@ -22,6 +22,7 @@ import UnknownIcon from './sns-icons/UnknownIcon.vue';
 import GooglePlayStoreIcon from './sns-icons/GooglePlayStoreIcon.vue';
 import SoundcloudIcon from './sns-icons/SoundcloudIcon.vue';
 import DeviantartIcon from './sns-icons/DeviantartIcon.vue';
+import VgenIcon from './sns-icons/VgenIcon.vue';
 
 defineProps<{ link: SnsLinkType, toDark: boolean }>();
 
@@ -38,6 +39,7 @@ function iconByLabel(label: SnsLinkLabel | string) {
     case 'google-play-store': return GooglePlayStoreIcon;
     case 'soundcloud': return SoundcloudIcon;
     case 'deviantart': return DeviantartIcon;
+    case 'vgen': return VgenIcon;
     default: return UnknownIcon;
   }
 }
@@ -56,6 +58,7 @@ defineComponent({
     GooglePlayStoreIcon,
     SoundcloudIcon,
     DeviantartIcon,
+    VgenIcon,
   }
 });
 </script>
