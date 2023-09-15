@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.26](https://github.com/moonlitworks/website/compare/v0.0.25...v0.0.26) (2023-09-15)
+
+
+### Features
+
+* **projects:** add forenotes section ([e73b6d5](https://github.com/moonlitworks/website/commit/e73b6d54da18827e2b3b3b5a92dfcaefa5f56edd))
+
 ### [0.0.25](https://github.com/moonlitworks/website/compare/v0.0.24...v0.0.25) (2023-09-09)
 
 
